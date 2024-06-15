@@ -1,27 +1,23 @@
+function convert() {
+    var celsius = document.getElementById('celsius').value;
+    if (celsius === "") {
+        document.getElementById('result').innerText = "Please enter a temperature.";
+        return;
+    }
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <!-- CODE BY HELPME_CODER -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Celsius to Fahrenheit Converter | HELPME_CODER</title>
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    var fahrenheit = (celsius * 9/5) + 32;
+    document.getElementById('result').innerText = celsius + "°C is " + fahrenheit.toFixed(2) + "°F";
 
-<div id="converter">
-    <h2>Celsius to Fahrenheit Converter</h2>
-    <label for="celsius">Enter Celsius:</label>
-    <input type="number" id="celsius" placeholder="Enter temperature in Celsius">
-
-    <button onclick="convert()">Convert</button>
-
-    <div id="result"></div>
-</div>
-<!-- JAVASCRIPT -->
-<script src="script.js"></script>
-
-</body>
-</html>
+    // Change background color based on the converted temperature
+    var converter = document.getElementById('converter');
+    if (fahrenheit >= 90) {
+        converter.classList.remove('cold', 'comfortable');
+        converter.classList.add('hot');
+    } else if (fahrenheit <= 32) {
+        converter.classList.remove('comfortable', 'hot');
+        converter.classList.add('cold');
+    } else {
+        converter.classList.remove('cold', 'hot');
+        converter.classList.add('comfortable');
+    }
+}

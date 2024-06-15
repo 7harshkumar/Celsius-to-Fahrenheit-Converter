@@ -1,0 +1,86 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: #34476d;
+}
+
+#converter {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    transition: background-color 0.3s ease;
+}
+
+#converter:hover {
+    background-color: #f0f8ff; /* Light blue background on hover */
+}
+
+.hot {
+    background-color: #ff6347; /* Red background for hot temperatures */
+}
+
+.cold {
+    background-color: #6495ed; /* Blue background for cold temperatures */
+}
+
+.comfortable {
+    background-color: #98fb98; /* Light green background for comfortable temperatures */
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #555;
+    font-weight: bold;
+}
+
+input {
+    width: calc(100% - 22px);
+    padding: 12px 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 12px 24px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 24px;
+    color: #333;
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
